@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script
+src='//fw-cdn.com/13590026/5645938.js'
+chat='true' widgetId='297e00fa-9263-4525-be68-e6cb77b0ec83'>
+</script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weblio PH - Demo Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #ffffff;
+      color: #333;
+    }
+    header {
+      background-color: #ff6f00;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header img {
+      height: 65px;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    section {
+      display: none;
+      padding: 40px 20px;
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
+    }
+    .testimonial {
+      background-color: #fff8f0;
+      padding: 20px;
+      margin: 20px 0;
+      border-left: 4px solid #ff6f00;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    input, textarea, button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    button {
+      background-color: #ff6f00;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="C:\Users\Kris Padilla\Downloads\unnamed.png" alt="Weblio Logo">
+    <nav>
+      <a href="#" onclick="showSection('about')">About</a>
+      <a href="#" onclick="showSection('how')"> How to Apply</a>
+      <a href="#" onclick="showSection('testimonials')">Testimonials</a>
+      <a href="https://weblioph.freshservice.com/support/home">Support Portal</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <img src="C:\Users\Kris Padilla\Downloads\pexels-liuuu-_61-2383408-30886968.jpg" alt="Hero Image">
+  </div>
+
+  <section id="about" class="active">
+    <h2>Welcome to Weblio PH</h2> 
+    <br> <br>
+    <p><strong><i> MISSION : Expanding mankind's possibilities </i> </strong></p> 
+    <br>
+    <p>Weblio Philippines, Inc., is an affiliate company of GRAS Group, Inc. (formerly Weblio, Inc.), with a head office in Tokyo, Japan.
+       GRAS Group, Inc., is the leading provider of school/corporate lessons to junior high school and high schools in Japan. In August 2014, Weblio Philippines, Inc., opened its    
+       doors to an online English tutorial services as part of the company’s mission to expand mankind’s possibilities. To date, the company has been providing home-based tutors an 
+       avenue to expand their possibilities by providing fun and satisfying lessons to our customers.</p>
+  </section>
+
+  <section id="how">
+      <h2>Minimum Requirements</h2>
+      <ul>
+        <li>Proficient in both oral and written English</li>
+        <li>At least 18 years old</li>
+        <li>College level or graduate</li>
+        <li>Has a laptop/desktop, stable internet, and a headset</li>
+      </ul>
+      <img src="C:\Users\Kris Padilla\Pictures\Screenshots\Screenshot 2025-07-14 164842.png" alt="Requirements Image" class="requirements-img"/>
+    </section>
+
+    <section>
+      <h2>Application Steps</h2>
+      <ol>
+        <li>Fill out the online application form</li>
+        <li>Attend the orientation</li>
+        <li>Pass the English proficiency test</li>
+        <li>Start conducting lessons</li>
+      </ol>
+      <img src="https://weblio.ph/images/steps.png" alt="Application Steps Image" class="steps-img"/>
+    </section>
+
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Tutors Say</h2>
+    <div class="testimonial">
+      <p>"Weblio changed my life. I now teach from home and enjoy meaningful conversations daily." – Jane D.</p>
+    </div>
+    <div class="testimonial">
+      <p>"Supportive staff, flexible hours, and amazing students!" – Mark R.</p>
+    </div>
+  </section>
+
+  <section id="apply">
+    <h2>Apply Now</h2>
+    <form action="https://yourfreshserviceURL.com/api/v2/tickets" method="post">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" placeholder="Tell us why you want to join Weblio" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>All rights reserved KCP 2025 | Weblio PH | Demo Site Only</p>
+  </footer>
+
+  <!-- Freshchat Widget -->
+  <script src="https://webchat.freshchat.com/js/widget.js" async></script>
+  <script>
+    window.fcWidget.init({
+      token: "YOUR_WIDGET_TOKEN_HERE",
+      host: "https://wchat.freshchat.com"
+    });
+  </script>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
